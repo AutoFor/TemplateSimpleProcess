@@ -1,3 +1,4 @@
 # .localフォルダ内のすべてを無視
 .local/
 .screenshots/
+.objects/
