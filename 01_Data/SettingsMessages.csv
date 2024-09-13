@@ -1,0 +1,15 @@
+﻿MailNo,MailTo,MailCc,MailSubject,MailBody
+0,{{UserMailAddress}},{{AdminMailAddress}},[RPA] {{ProcessName}}_成功,"ご担当者様<br>
+<br>
+お世話になっております。<br>
+RPA自動振込が完了しました。<br>
+<br>
+[金融機関名称] {{金融機関名称}}<br>
+[支店名] {{支店名}}<br>
+[受取人名] {{受取人名}}<br>
+[振込金額] {{payrollAmount}}<br>
+<br><br>
+どうぞ、ご確認よろしくお願いいたします。"
+1,{{UserMailAddress}},{{AdminMailAddress}},,
+900,{{AdminNotificationMailAddress}},{{UserMailAddress}},,
+901,{{AdminNotificationMailAddress}},{{UserMailAddress}},,

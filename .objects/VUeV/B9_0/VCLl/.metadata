@@ -1,0 +1,14 @@
+﻿{
+  "Name": "アメリカン・エキスプレス",
+  "Type": "Screen",
+  "TaxonomyType": "Screen",
+  "Id": "VCLlgllBgE2Oqdq4XFqPLQ",
+  "Reference": "LH9-eAnXBEWeAs_Vy78s-A/VCLlgllBgE2Oqdq4XFqPLQ",
+  "ParentRef": "LH9-eAnXBEWeAs_Vy78s-A/B9_0YKkUvk-0N5Msy4wdvg",
+  "Created": "2024-09-07T11:14:46.2495161Z",
+  "Updated": "2024-09-07T11:14:46.2495161Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=23.4.8.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.2.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

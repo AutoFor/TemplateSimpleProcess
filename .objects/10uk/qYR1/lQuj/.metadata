@@ -1,0 +1,14 @@
+﻿{
+  "Name": "S-GOALS　来歴情報管理システム",
+  "Type": "Screen",
+  "TaxonomyType": "Screen",
+  "Id": "lQujymxBL0OVUaUrhyG9gQ",
+  "Reference": "sF-L8F6_tUKRRZQ6hMIH7Q/lQujymxBL0OVUaUrhyG9gQ",
+  "ParentRef": "sF-L8F6_tUKRRZQ6hMIH7Q/qYR1rCUUnU2RRqoYmNonSA",
+  "Created": "2023-11-21T02:25:23.6904562Z",
+  "Updated": "2023-11-21T02:25:23.6904562Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=23.10.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

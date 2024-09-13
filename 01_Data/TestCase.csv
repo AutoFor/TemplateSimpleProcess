@@ -1,0 +1,3 @@
+TestCaseNo,TestDescription,ExpectedOutcome,ActualOutcome,SaveEmailDraft
+0,正常,,,
+1,メールを下書き保存する,,,true
