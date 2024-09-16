@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1129,1447</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1334,1452.6666666666667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>InitAllSettingsCsvs_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -110,27 +110,27 @@
       <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="InitAllSettingsCsvs" sap:VirtualizedContainerService.HintSize="670,1382" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="InitAllSettingsCsvs" sap:VirtualizedContainerService.HintSize="670,1388" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="Placeholders" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_TempConfig" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_Config" />
-      <Variable x:TypeArguments="x:String" Default="240209" Name="yyMMdd" />
+      <Variable x:TypeArguments="x:String" Name="yyMMdd" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <If Condition="[Config Is Nothing]" DisplayName="条件分岐 (if)" sap:VirtualizedContainerService.HintSize="608,1294" sap2010:WorkflowViewState.IdRef="If_3">
+    <If Condition="[Config Is Nothing]" DisplayName="条件分岐 (if)" sap:VirtualizedContainerService.HintSize="608,1300" sap2010:WorkflowViewState.IdRef="If_3">
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="574,997" sap2010:WorkflowViewState.IdRef="Sequence_7">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="574,1002" sap2010:WorkflowViewState.IdRef="Sequence_7">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="512,909" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="512,914" sap2010:WorkflowViewState.IdRef="Sequence_9">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Int32" Name="idx" />
               <Variable x:TypeArguments="sd:DataRow" Name="NewRow" />
@@ -141,8 +141,8 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="メッセージをログ" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[String.Format(&quot;InitAllSettingsCsv.xaml is ruuning... [{0}] '{1}'&quot;,&quot;ConfigCsvPath&quot;,ConfigCsvPath)]" />
-            <Sequence DisplayName="Configの生成" sap:VirtualizedContainerService.HintSize="450,459" sap2010:WorkflowViewState.IdRef="Sequence_25">
+            <ui:LogMessage DisplayName="メッセージをログ" sap:VirtualizedContainerService.HintSize="450,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[String.Format(&quot;InitAllSettingsCsv.xaml is ruuning... [{0}] '{1}'&quot;,&quot;ConfigCsvPath&quot;,ConfigCsvPath)]" />
+            <Sequence DisplayName="Configの生成" sap:VirtualizedContainerService.HintSize="450,460.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_25">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="st_Config" />
               </Sequence.Variables>
@@ -152,10 +152,10 @@
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ReadTextFile File="{x:Null}" Content="[st_Config]" DisplayName="テキスト ファイルを読み込み" FileName="[ConfigCsvPath]" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
-              <ui:GenerateDataTable ColumnSeparators="{x:Null}" ColumnSizes="{x:Null}" NewLineSeparator="{x:Null}" Positions="{x:Null}" AutoDetectTypes="False" CSVParsing="True" DataTable="[dt_TempConfig]" DisplayName="テキストからデータ テーブルを生成" sap:VirtualizedContainerService.HintSize="388,226" sap2010:WorkflowViewState.IdRef="GenerateDataTable_1" Input="[st_Config]" UseColumnHeader="True" />
+              <ui:ReadTextFile File="{x:Null}" Content="[st_Config]" DisplayName="テキスト ファイルを読み込み" FileName="[ConfigCsvPath]" sap:VirtualizedContainerService.HintSize="388,114" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
+              <ui:GenerateDataTable ColumnSeparators="{x:Null}" ColumnSizes="{x:Null}" NewLineSeparator="{x:Null}" Positions="{x:Null}" AutoDetectTypes="False" CSVParsing="True" DataTable="[dt_Config]" DisplayName="テキストからデータ テーブルを生成" sap:VirtualizedContainerService.HintSize="388,226.66666666666666" sap2010:WorkflowViewState.IdRef="GenerateDataTable_1" Input="[st_Config]" UseColumnHeader="True" />
             </Sequence>
-            <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="450,116" sap2010:WorkflowViewState.IdRef="Assign_12">
+            <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="450,118" sap2010:WorkflowViewState.IdRef="Assign_12">
               <Assign.To>
                 <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">[Config]</OutArgument>
               </Assign.To>
@@ -207,7 +207,7 @@ ToDictionary(Function(x) x.Key, Function(x) x.Value)]</InArgument>
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence sap2010:Annotation.AnnotationText="" DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,135" sap2010:WorkflowViewState.IdRef="Sequence_8">
+        <Sequence sap2010:Annotation.AnnotationText="" DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,135.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_8">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
