@@ -110,7 +110,7 @@
       <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="InitAllSettingsCsvs" sap:VirtualizedContainerService.HintSize="670,1388" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="InitAllSettingsCsvs" sap:VirtualizedContainerService.HintSize="876.0000000000001,1388.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="Placeholders" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_TempConfig" />
@@ -122,15 +122,15 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <If Condition="[Config Is Nothing]" DisplayName="条件分岐 (if)" sap:VirtualizedContainerService.HintSize="608,1300" sap2010:WorkflowViewState.IdRef="If_3">
+    <If Condition="[Config Is Nothing]" DisplayName="条件分岐 (if)" sap:VirtualizedContainerService.HintSize="550.4,1365.6" sap2010:WorkflowViewState.IdRef="If_3">
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="574,1002" sap2010:WorkflowViewState.IdRef="Sequence_7">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="516.8,1083.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="512,914" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="483.2,1023.2" sap2010:WorkflowViewState.IdRef="Sequence_9">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Int32" Name="idx" />
               <Variable x:TypeArguments="sd:DataRow" Name="NewRow" />
@@ -141,8 +141,8 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="メッセージをログ" sap:VirtualizedContainerService.HintSize="450,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[String.Format(&quot;InitAllSettingsCsv.xaml is ruuning... [{0}] '{1}'&quot;,&quot;ConfigCsvPath&quot;,ConfigCsvPath)]" />
-            <Sequence DisplayName="Configの生成" sap:VirtualizedContainerService.HintSize="450,460.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_25">
+            <ui:LogMessage DisplayName="メッセージをログ" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[String.Format(&quot;InitAllSettingsCsv.xaml is ruuning... [{0}] '{1}'&quot;,&quot;ConfigCsvPath&quot;,ConfigCsvPath)]" />
+            <Sequence DisplayName="Configの生成" sap:VirtualizedContainerService.HintSize="449.6,431.2" sap2010:WorkflowViewState.IdRef="Sequence_25">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="st_Config" />
               </Sequence.Variables>
@@ -152,10 +152,10 @@
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ReadTextFile File="{x:Null}" Content="[st_Config]" DisplayName="テキスト ファイルを読み込み" FileName="[ConfigCsvPath]" sap:VirtualizedContainerService.HintSize="388,114" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
-              <ui:GenerateDataTable ColumnSeparators="{x:Null}" ColumnSizes="{x:Null}" NewLineSeparator="{x:Null}" Positions="{x:Null}" AutoDetectTypes="False" CSVParsing="True" DataTable="[dt_Config]" DisplayName="テキストからデータ テーブルを生成" sap:VirtualizedContainerService.HintSize="388,226.66666666666666" sap2010:WorkflowViewState.IdRef="GenerateDataTable_1" Input="[st_Config]" UseColumnHeader="True" />
+              <ui:ReadTextFile File="{x:Null}" Content="[st_Config]" DisplayName="テキスト ファイルを読み込み" FileName="[ConfigCsvPath]" sap:VirtualizedContainerService.HintSize="416,112.8" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
+              <ui:GenerateDataTable ColumnSeparators="{x:Null}" ColumnSizes="{x:Null}" NewLineSeparator="{x:Null}" Positions="{x:Null}" AutoDetectTypes="False" CSVParsing="True" DataTable="[dt_Config]" DisplayName="テキストからデータ テーブルを生成" sap:VirtualizedContainerService.HintSize="416,226.4" sap2010:WorkflowViewState.IdRef="GenerateDataTable_1" Input="[st_Config]" UseColumnHeader="True" />
             </Sequence>
-            <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="450,118" sap2010:WorkflowViewState.IdRef="Assign_12">
+            <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="449.6,115.2" sap2010:WorkflowViewState.IdRef="Assign_12">
               <Assign.To>
                 <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">[Config]</OutArgument>
               </Assign.To>
@@ -174,40 +174,23 @@ ToDictionary(Function(x) x.Key, Function(x) x.Value)]</InArgument>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <ui:CommentOut DisplayName="コメント アウト" sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-              <ui:CommentOut.Body>
-                <Sequence DisplayName="無視されるアクティビティ" sap:VirtualizedContainerService.HintSize="416,307" sap2010:WorkflowViewState.IdRef="Sequence_30">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeCode ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="デバッグ時のループを省略するため" Code="' 新しい設定用の辞書を初期化します。この辞書は、設定名をキーとして、その値を格納します。&#xA;Config = New Dictionary(Of String, String)&#xA;&#xA;' 新しいプレースホルダー用の辞書を初期化します。この辞書は、プレースホルダー名をキーとして、その値を格納します。&#xA;Placeholders = New Dictionary(Of String, String)&#xA;&#xA;' dt_Configの各行について処理を行います。これは設定値を含むDataTableです。&#xA;For Each row As DataRow In dt_Config.Rows&#xA;&#x9;&#xA;&#x9;' Configの処理:Tar&#xA;&#x9;' 行の&quot;Name&quot;列に何かしらの文字が含まれている場合、その名前と値をConfig辞書に追加します。&#xA;&#x9;If Not String.IsNullOrWhiteSpace(row(&quot;Name&quot;).ToString.Trim) Then&#xA;&#x9;&#x9;Config(Trim(Row(&quot;Name&quot;).ToString)) = Trim(Row(&quot;Value&quot;).ToString)&#xA;&#x9;End If&#xA;&#x9;&#xA;&#x9;' Placeholdersの処理:&#xA;&#x9;' &quot;IsPlaceholder&quot;列が空ではない場合、その行はプレースホルダーとみなし、Placeholders辞書に追加します。&#xA;&#x9;If Not String.IsNullOrEmpty(row(&quot;IsPlaceholder&quot;).ToString) Then&#xA;&#x9;&#x9;Placeholders(Trim(row(&quot;Name&quot;).ToString)) = Trim(row(&quot;Value&quot;).ToString)&#xA;&#x9;End If&#xA;Next&#xA;&#xA;' Config内のプレースホルダーの値を実際の値に置き換えます。&#xA;For Each placeholderKvp In Placeholders&#xA;   For Each configKvp In Config&#xA;       ' Configの各値にプレースホルダーが含まれているか確認し、含まれていればその値で置換します。&#xA;       If configKvp.Value.Contains(String.Format(&quot;{{{{{0}}}}}&quot;,placeholderKvp.Key))&#xA;           Config(configKvp.Key) = configKvp.Value.Replace(String.Format(&quot;{{{{{0}}}}}&quot;,placeholderKvp.Key), placeholderKvp.Value)&#xA;       End If&#xA;   Next&#xA;Next&#xA;&#xA;' 必須ディレクトリの作成:&#xA;' &quot;IsMandatoryDir&quot;列が空ではない行について、その&quot;Name&quot;列で指定された名前のディレクトリを作成します。&#xA;For Each row As DataRow In dt_Config.Rows&#xA;&#x9;If Not String.IsNullOrEmpty(row(&quot;IsMandatoryDir&quot;).ToString) Then&#xA;&#x9;&#x9;   Directory.CreateDirectory(Config(Row(&quot;Name&quot;).ToString))&#xA;&#x9;End If&#xA;Next&#xA;" DisplayName="コードを呼び出し" sap:VirtualizedContainerService.HintSize="354,219" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
-                    <ui:InvokeCode.Arguments>
-                      <InArgument x:TypeArguments="sd:DataTable" x:Key="dt_Config">[dt_Config]</InArgument>
-                      <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="Config">[Config]</OutArgument>
-                      <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="Placeholders">[Placeholders]</OutArgument>
-                    </ui:InvokeCode.Arguments>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:InvokeCode>
-                </Sequence>
-              </ui:CommentOut.Body>
+            <ui:InvokeCode ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="デバッグ時のループを省略するため" Code="' 新しい設定用の辞書を初期化します。この辞書は、設定名をキーとして、その値を格納します。&#xA;Config = New Dictionary(Of String, String)&#xA;&#xA;' 新しいプレースホルダー用の辞書を初期化します。この辞書は、プレースホルダー名をキーとして、その値を格納します。&#xA;Placeholders = New Dictionary(Of String, String)&#xA;&#xA;' dt_Configの各行について処理を行います。これは設定値を含むDataTableです。&#xA;For Each row As DataRow In dt_Config.Rows&#xA;&#x9;&#xA;&#x9;' Configの処理:Tar&#xA;&#x9;' 行の&quot;Name&quot;列に何かしらの文字が含まれている場合、その名前と値をConfig辞書に追加します。&#xA;&#x9;If Not String.IsNullOrWhiteSpace(row(&quot;Name&quot;).ToString.Trim) Then&#xA;&#x9;&#x9;Config(Trim(Row(&quot;Name&quot;).ToString)) = Trim(Row(&quot;Value&quot;).ToString)&#xA;&#x9;End If&#xA;&#x9;&#xA;&#x9;' Placeholdersの処理:&#xA;&#x9;' &quot;IsPlaceholder&quot;列が空ではない場合、その行はプレースホルダーとみなし、Placeholders辞書に追加します。&#xA;&#x9;If Not String.IsNullOrEmpty(row(&quot;IsPlaceholder&quot;).ToString) Then&#xA;&#x9;&#x9;Placeholders(Trim(row(&quot;Name&quot;).ToString)) = Trim(row(&quot;Value&quot;).ToString)&#xA;&#x9;End If&#xA;Next&#xA;&#xA;' Config内のプレースホルダーの値を実際の値に置き換えます。&#xA;For Each placeholderKvp In Placeholders&#xA;   For Each configKvp In Config&#xA;       ' Configの各値にプレースホルダーが含まれているか確認し、含まれていればその値で置換します。&#xA;       If configKvp.Value.Contains(String.Format(&quot;{{{{{0}}}}}&quot;,placeholderKvp.Key))&#xA;           Config(configKvp.Key) = configKvp.Value.Replace(String.Format(&quot;{{{{{0}}}}}&quot;,placeholderKvp.Key), placeholderKvp.Value)&#xA;       End If&#xA;   Next&#xA;Next&#xA;&#xA;' 必須ディレクトリの作成:&#xA;' &quot;IsMandatoryDir&quot;列が空ではない行について、その&quot;Name&quot;列で指定された名前のディレクトリを作成します。&#xA;For Each row As DataRow In dt_Config.Rows&#xA;&#x9;If Not String.IsNullOrEmpty(row(&quot;IsMandatoryDir&quot;).ToString) Then&#xA;&#x9;&#x9;   Directory.CreateDirectory(Config(Row(&quot;Name&quot;).ToString))&#xA;&#x9;End If&#xA;Next&#xA;" DisplayName="コードを呼び出し" sap:VirtualizedContainerService.HintSize="449.6,219.2" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
+              <ui:InvokeCode.Arguments>
+                <InArgument x:TypeArguments="sd:DataTable" x:Key="dt_Config">[dt_Config]</InArgument>
+                <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="Config">[Config]</OutArgument>
+                <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="Placeholders">[Placeholders]</OutArgument>
+              </ui:InvokeCode.Arguments>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-            </ui:CommentOut>
+            </ui:InvokeCode>
           </Sequence>
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence sap2010:Annotation.AnnotationText="" DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,135.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_8">
+        <Sequence sap2010:Annotation.AnnotationText="" DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,120.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>

@@ -79,7 +79,7 @@
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This sequence steps in during execution when the project encounters an unmanaged error.&#xA;&#xA;Important: Arguments 'errorInfo' and 'result' should not be removed." DisplayName="Global Exception Handler" sap:VirtualizedContainerService.HintSize="592,1086" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="This sequence steps in during execution when the project encounters an unmanaged error.&#xA;&#xA;Important: Arguments 'errorInfo' and 'result' should not be removed." DisplayName="Global Exception Handler" sap:VirtualizedContainerService.HintSize="876.0000000000001,989.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="answer" />
       <Variable x:TypeArguments="x:Int32" Default="0" Name="retry" />
@@ -90,15 +90,15 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Error" sap:VirtualizedContainerService.HintSize="530,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Error" Message="[errorInfo.Exception.ToString]" />
-    <If sap2010:Annotation.AnnotationText="Choose the action to be taken after the Global Exception Handler steps in: &#xA;&#xA;Continue - The exception is re-thrown.&#xA;&#xA;Ignore - The exception is ignored, and the execution continues from the next activity.&#xA;&#xA;Retry - The activity which threw the exception is retried.&#xA;&#xA;Abort - The execution stops after running the current handler." Condition="[errorInfo.RetryCount &lt; 3]" DisplayName="Choose Next Behaviour" sap:VirtualizedContainerService.HintSize="530,763" sap2010:WorkflowViewState.IdRef="If_1">
+    <ui:LogMessage DisplayName="Log Error" sap:VirtualizedContainerService.HintSize="500.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Error" Message="[errorInfo.Exception.ToString]" />
+    <If sap2010:Annotation.AnnotationText="Choose the action to be taken after the Global Exception Handler steps in: &#xA;&#xA;Continue - The exception is re-thrown.&#xA;&#xA;Ignore - The exception is ignored, and the execution continues from the next activity.&#xA;&#xA;Retry - The activity which threw the exception is retried.&#xA;&#xA;Abort - The execution stops after running the current handler." Condition="[errorInfo.RetryCount &lt; 3]" DisplayName="Choose Next Behaviour" sap:VirtualizedContainerService.HintSize="500.8,732" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Assign sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_5">
+        <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_5">
           <Assign.To>
             <OutArgument x:TypeArguments="uico:ErrorAction">[result]</OutArgument>
           </Assign.To>
@@ -108,13 +108,13 @@
         </Assign>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="496,340" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="467.2,310.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Assign sap:VirtualizedContainerService.HintSize="434,115" sap2010:WorkflowViewState.IdRef="Assign_6">
+          <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_6">
             <Assign.To>
               <OutArgument x:TypeArguments="uico:ErrorAction">[result]</OutArgument>
             </Assign.To>
@@ -122,7 +122,7 @@
               <InArgument x:TypeArguments="uico:ErrorAction">[ErrorAction.Abort]</InArgument>
             </Assign.Value>
           </Assign>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="O365Outlook\O365OutlookSendMail.xaml - ワークフロー ファイルを呼び出し" sap:VirtualizedContainerService.HintSize="434,137" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="O365Outlook\O365OutlookSendMail.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Framework\O365OutlookSendMail.xaml - ワークフロー ファイルを呼び出し" sap:VirtualizedContainerService.HintSize="433.6,136.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Framework\O365OutlookSendMail.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="s:Exception" x:Key="SystemException" />
               <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="Config" />
