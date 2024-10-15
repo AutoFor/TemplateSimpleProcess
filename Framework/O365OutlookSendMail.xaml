@@ -1,20 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="SendMail" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:umam="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umame="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail.Enums;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <x:Members>
-    <x:Property sap2010:Annotation.AnnotationText="Used during transitions between states to represent exceptions other than business exceptions." Name="SystemException" Type="InArgument(s:Exception)" />
-    <x:Property Name="Config" Type="InArgument(scg:Dictionary(x:String, x:String))" />
-    <x:Property Name="MailNo" Type="InArgument(x:Int32)" />
-  </x:Members>
-  <this:SendMail.SystemException>
-    <InArgument x:TypeArguments="s:Exception" />
-  </this:SendMail.SystemException>
-  <this:SendMail.MailNo>
-    <InArgument x:TypeArguments="x:Int32" />
-  </this:SendMail.MailNo>
-  <VisualBasic.Settings>
-    <x:Null />
-  </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1129,2573.5</sap:VirtualizedContainerService.HintSize>
-  <sap2010:WorkflowViewState.IdRef>SendMail_1</sap2010:WorkflowViewState.IdRef>
+<Activity mc:Ignorable="sap sap2010" x:Class="SendMail" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1129,2573.5" sap2010:WorkflowViewState.IdRef="SendMail_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:umam="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umame="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail.Enums;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="60">
       <x:String>Microsoft.VisualBasic</x:String>
@@ -65,6 +49,7 @@
       <x:String>UiPath.Platform.ResourceHandling</x:String>
       <x:String>UiPath.MicrosoftOffice365.Activities.Mail</x:String>
       <x:String>UiPath.MicrosoftOffice365.Activities</x:String>
+      <x:String>UiPath.Web.Activities.ViewModels.SWEntities.JSONを逆シリアル化80ec1d.Bundle</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -139,6 +124,7 @@
       <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Platform</AssemblyReference>
       <AssemblyReference>JSONを逆シリアル化266d61.4P3Dp3e8IJC1K1Fe71eGSy01</AssemblyReference>
+      <AssemblyReference>JSONを逆シリアル化80ec1d.oTLH4ThbwM1cUvyw3DYhtn1</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -147,7 +133,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="SendMail" sap:VirtualizedContainerService.HintSize="637,2508.5" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SendMail" sap:VirtualizedContainerService.HintSize="1917.3333333333333,2390.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_Messages" />
       <Variable x:TypeArguments="x:String" Name="MailTo" />
@@ -162,21 +148,21 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="575,175" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[String.Format(&quot;OutlookSendMail.xaml is Running... in32MailNo = {0}&quot;,{MailNo.ToString})]" />
-    <If Condition="[Config Is Nothing]" DisplayName="単体テスト用" sap:VirtualizedContainerService.HintSize="575,565" sap2010:WorkflowViewState.IdRef="If_2">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="546.6666666666666,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[String.Format(&quot;OutlookSendMail.xaml is Running... in32MailNo = {0}&quot;,{GlobalVariablesNamespace.GlobalVariables.MailNo.ToString})]" />
+    <If Condition="[Config Is Nothing]" DisplayName="条件分岐 (if)" sap:VirtualizedContainerService.HintSize="546.6666666666666,524" sap2010:WorkflowViewState.IdRef="If_3">
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="541,290" sap2010:WorkflowViewState.IdRef="Sequence_25">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="512.6666666666666,261.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_27">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:MultipleAssign DisplayName="複数代入" sap:VirtualizedContainerService.HintSize="479,202" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
+          <ui:MultipleAssign DisplayName="複数代入" sap:VirtualizedContainerService.HintSize="478.6666666666667,201.33333333333334" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
             <ui:MultipleAssign.AssignOperations>
               <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_14">
                   <ui:AssignOperation.To>
-                    <OutArgument x:TypeArguments="x:Int32">[MailNo]</OutArgument>
+                    <OutArgument x:TypeArguments="x:Int32">[GlobalVariablesNamespace.GlobalVariables.MailNo]</OutArgument>
                   </ui:AssignOperation.To>
                   <ui:AssignOperation.Value>
                     <InArgument x:TypeArguments="x:Int32">0</InArgument>
@@ -204,7 +190,7 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104" sap2010:WorkflowViewState.IdRef="Sequence_26">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_28">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -213,8 +199,8 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:ReadCsvFile DataTable="[dt_Messages]" Delimitator="Comma" DisplayName="CSV を読み込み" FilePath="01_Data\Messages.csv" sap:VirtualizedContainerService.HintSize="575,188" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1" />
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="575,273" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
+    <ui:ReadCsvFile DataTable="[dt_Messages]" Delimitator="Comma" DisplayName="CSV を読み込み" FilePath="01_Data\SettingsMessages.csv" sap:VirtualizedContainerService.HintSize="546.6666666666666,191.33333333333334" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1" />
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="546.6666666666666,272" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
@@ -230,7 +216,7 @@
               <OutArgument x:TypeArguments="x:String">[MailTo]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">[dt_Messages.Rows.Find(MailNo).item("MailTo").ToString]</InArgument>
+              <InArgument x:TypeArguments="x:String">[dt_Messages.Rows.Find(GlobalVariablesNamespace.GlobalVariables.MailNo).item("MailTo").ToString]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
@@ -238,7 +224,7 @@
               <OutArgument x:TypeArguments="x:String">[MailCc]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">[dt_Messages.Rows.Find(MailNo).Item("MailCc").ToString]</InArgument>
+              <InArgument x:TypeArguments="x:String">[dt_Messages.Rows.Find(GlobalVariablesNamespace.GlobalVariables.MailNo).Item("MailCc").ToString]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
@@ -246,7 +232,7 @@
               <OutArgument x:TypeArguments="x:String">[MailBody]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">[dt_Messages.Rows.Find(MailNo).Item("MailBody").ToString]</InArgument>
+              <InArgument x:TypeArguments="x:String">[dt_Messages.Rows.Find(GlobalVariablesNamespace.GlobalVariables.MailNo).Item("MailBody").ToString]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
@@ -254,47 +240,47 @@
               <OutArgument x:TypeArguments="x:String">[MailSubject]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">[dt_Messages.Rows.Find(MailNo).Item("MailSubject").ToString]</InArgument>
+              <InArgument x:TypeArguments="x:String">[dt_Messages.Rows.Find(GlobalVariablesNamespace.GlobalVariables.MailNo).Item("MailSubject").ToString]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <Switch x:TypeArguments="x:Int32" DisplayName="Switch" Expression="[MailNo]" sap:VirtualizedContainerService.HintSize="575,1219.5" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+    <Switch x:TypeArguments="x:Int32" DisplayName="Switch" Expression="[GlobalVariablesNamespace.GlobalVariables.MailNo]" sap:VirtualizedContainerService.HintSize="546.6666666666666,1204" sap2010:WorkflowViewState.IdRef="Switch`1_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence x:Key="0" sap:VirtualizedContainerService.HintSize="496,903.5" sap2010:WorkflowViewState.IdRef="Sequence_13">
+      <Sequence x:Key="0" sap:VirtualizedContainerService.HintSize="468,884.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_13">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <Assign DisplayName="MailTo" sap:VirtualizedContainerService.HintSize="434,116" sap2010:WorkflowViewState.IdRef="Assign_33">
+        <Assign DisplayName="MailTo" sap:VirtualizedContainerService.HintSize="434,118" sap2010:WorkflowViewState.IdRef="Assign_33">
           <Assign.To>
             <OutArgument x:TypeArguments="x:String">[MailTo]</OutArgument>
           </Assign.To>
           <Assign.Value>
             <InArgument x:TypeArguments="x:String" xml:space="preserve">[MailTo _
-.Replace("{{UserMailAddress}}",Config("UserMailAddress")) _
-.Replace("{{AdminMailAddress}}",Config("AdminMailAddress"))]</InArgument>
+.Replace("{{UserMailAddress}}",Config.UserMailAddress) _
+.Replace("{{AdminMailAddress}}",Config.AdminMailAddress)]</InArgument>
           </Assign.Value>
         </Assign>
-        <Assign DisplayName="MailCc" sap:VirtualizedContainerService.HintSize="434,116" sap2010:WorkflowViewState.IdRef="Assign_63">
+        <Assign DisplayName="MailCc" sap:VirtualizedContainerService.HintSize="434,118" sap2010:WorkflowViewState.IdRef="Assign_63">
           <Assign.To>
             <OutArgument x:TypeArguments="x:String">[MailCc]</OutArgument>
           </Assign.To>
           <Assign.Value>
             <InArgument x:TypeArguments="x:String" xml:space="preserve">[MailCc _
-.Replace("{{UserMailAddress}}",Config("UserMailAddress")) _
-.Replace("{{AdminMailAddress}}",Config("AdminMailAddress"))]</InArgument>
+.Replace("{{UserMailAddress}}",Config.UserMailAddress) _
+.Replace("{{AdminMailAddress}}",Config.AdminMailAddress)]</InArgument>
           </Assign.Value>
         </Assign>
-        <umam:SendMailConnections ArgumentAttachmentPaths="{x:Null}" AttachmentList="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" Mailbox="{x:Null}" ReplyTo="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="Existing" AuthScopesInvalid="False" Body="[MailBody]" Cc="[MailCc.Split(&quot;;&quot;c)]" ConnectionId="c29c7db3-aba5-4bb0-ac0a-8e8642aac0a8" DisplayName="メールを送信" sap:VirtualizedContainerService.HintSize="434,583.5" sap2010:WorkflowViewState.IdRef="SendMailConnections_1" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="[MailSubject]" To="[MailTo.Split(&quot;;&quot;c)]" UseConnectionService="True" UseSharedMailbox="False">
+        <umam:SendMailConnections ArgumentAttachmentPaths="{x:Null}" AttachmentList="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" Mailbox="{x:Null}" ReplyTo="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="Existing" AuthScopesInvalid="False" Body="[MailBody]" Cc="[MailCc.Split(&quot;;&quot;c)]" ConnectionId="c29c7db3-aba5-4bb0-ac0a-8e8642aac0a8" DisplayName="メールを送信" sap:VirtualizedContainerService.HintSize="434,588.6666666666666" sap2010:WorkflowViewState.IdRef="SendMailConnections_1" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="[MailSubject]" To="[MailTo.Split(&quot;;&quot;c)]" UseConnectionService="True" UseSharedMailbox="False">
           <umam:SendMailConnections.AttachmentsBackup>
             <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="Existing">
               <usau:BackupSlot.BackupValues>

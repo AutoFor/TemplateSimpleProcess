@@ -1,0 +1,34 @@
+[
+  {
+    "Constant": false,
+    "Name": "Config",
+    "TypeFullyQualifiedName": "UiPath.Web.Activities.ViewModels.SWEntities.JSONを逆シリアル化80ec1d.Bundle.JSONを逆シリアル化80ec1d, JSONを逆シリアル化80ec1d.oTLH4ThbwM1cUvyw3DYhtn1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+    "UnresolvedTypeFullyQualifiedName": null,
+    "Expression": null,
+    "IsLiteral": false
+  },
+  {
+    "Constant": false,
+    "Name": "SystemException",
+    "TypeFullyQualifiedName": "System.Exception, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+    "UnresolvedTypeFullyQualifiedName": null,
+    "Expression": null,
+    "IsLiteral": false
+  },
+  {
+    "Constant": false,
+    "Name": "BusinessException",
+    "TypeFullyQualifiedName": "UiPath.Core.BusinessRuleException, UiPath.System.Activities, Version=24.2.0.0, Culture=neutral, PublicKeyToken=null",
+    "UnresolvedTypeFullyQualifiedName": null,
+    "Expression": null,
+    "IsLiteral": false
+  },
+  {
+    "Constant": false,
+    "Name": "MailNo",
+    "TypeFullyQualifiedName": "System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+    "UnresolvedTypeFullyQualifiedName": null,
+    "Expression": null,
+    "IsLiteral": false
+  }
+]

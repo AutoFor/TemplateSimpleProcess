@@ -1,12 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="InitiAllSettings" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uwavsdb="clr-namespace:UiPath.Web.Activities.ViewModels.SWEntities.DeserializeJsonJObjectcb3d48.Bundle;assembly=DeserializeJsonJObje.BmXqV2NgIqI1BX1jM3rFNkl1" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <x:Members>
-    <x:Property Name="Config" Type="OutArgument(uwavsdb:DeserializeJsonJObjectcb3d48)" />
-  </x:Members>
-  <VisualBasic.Settings>
-    <x:Null />
-  </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1873.3333333333333,913.3333333333334</sap:VirtualizedContainerService.HintSize>
-  <sap2010:WorkflowViewState.IdRef>GetAllSettings_1</sap2010:WorkflowViewState.IdRef>
+<Activity mc:Ignorable="sap sap2010" x:Class="InitiAllSettings" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1873.3333333333333,913.3333333333334" sap2010:WorkflowViewState.IdRef="GetAllSettings_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uwavsjb="clr-namespace:UiPath.Web.Activities.ViewModels.SWEntities.JSONを逆シリアル化80ec1d.Bundle;assembly=JSONを逆シリアル化80ec1d.oTLH4ThbwM1cUvyw3DYhtn1" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>Microsoft.VisualBasic</x:String>
@@ -58,6 +50,7 @@
       <x:String>UiPath.Web.Activities.ViewModels.SWEntities.JSONを逆シリアル化5f17bd.Bundle</x:String>
       <x:String>UiPath.Platform.ResourceHandling</x:String>
       <x:String>UiPath.Web.Activities.ViewModels.SWEntities.JSONを逆シリアル化104aa4.Bundle</x:String>
+      <x:String>UiPath.Web.Activities.ViewModels.SWEntities.JSONを逆シリアル化80ec1d.Bundle</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -132,9 +125,10 @@
       <AssemblyReference>JSONを逆シリアル化5f17bd.0rKeH2UTg1K1VaFZV3BJ9Of3</AssemblyReference>
       <AssemblyReference>UiPath.Platform</AssemblyReference>
       <AssemblyReference>JSONを逆シリアル化104aa4.6TxsL2WX7wN1AeU3tyk1rQ3</AssemblyReference>
+      <AssemblyReference>JSONを逆シリアル化80ec1d.oTLH4ThbwM1cUvyw3DYhtn1</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="プロジェクト全体で使用される設定辞書を初期化、入力、出力します。&#xA;設定と定数はローカル設定ファイルから読み込まれ、アセットはOrchestratorからフェッチされます。&#xA;アセット値は、同じ名前で定義されている場合、設定と定数の値を上書きします。" DisplayName="Initialize All Settings" sap:VirtualizedContainerService.HintSize="496,672.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="プロジェクト全体で使用される設定辞書を初期化、入力、出力します。&#xA;設定と定数はローカル設定ファイルから読み込まれ、アセットはOrchestratorからフェッチされます。&#xA;アセット値は、同じ名前で定義されている場合、設定と定数の値を上書きします。" DisplayName="Initialize All Settings" sap:VirtualizedContainerService.HintSize="1934.6666666666665,879.3733333333332" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Path to the configuration file that defines settings, constants and assets." Name="ConfigFilePath" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_Config" />
@@ -156,6 +150,6 @@
       </Assign.Value>
     </Assign>
     <ui:ReadTextFile File="{x:Null}" Content="[st_Config]" DisplayName="テキスト ファイルを読み込み" FileName="[ConfigFilePath]" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
-    <ui:DeserializeJson x:TypeArguments="uwavsdb:DeserializeJsonJObjectcb3d48" DisplayName="JSON を逆シリアル化" sap:VirtualizedContainerService.HintSize="434,114.66666666666667" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[Config]" JsonSample="{}{&#xA;  &quot;UserMailAddress&quot;: &quot;&quot;,&#xA;  &quot;AdminMailAddress&quot;: &quot;&quot;,&#xA;  &quot;payrollAmount&quot;: &quot;&quot;&#xA;}&#xA;" JsonString="[st_Config]" />
+    <ui:DeserializeJson x:TypeArguments="uwavsjb:JSONを逆シリアル化80ec1d" JsonObject="{x:Null}" DisplayName="JSON を逆シリアル化" sap:VirtualizedContainerService.HintSize="434,114.66666666666667" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonSample="{}{&#xA;  &quot;UserMailAddress&quot;: &quot;&quot;,&#xA;  &quot;AdminMailAddress&quot;: &quot;&quot;,&#xA;  &quot;TransferAmount&quot;: &quot;&quot;&#xA;}&#xA;" JsonString="[st_Config]" />
   </Sequence>
 </Activity>
